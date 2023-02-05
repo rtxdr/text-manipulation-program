@@ -51,16 +51,7 @@ namespace textmanip
         {
             chareveryxcharpanel.Hide();
             removepanel.Hide();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            replacepanel.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,11 +62,6 @@ namespace textmanip
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -92,6 +78,15 @@ namespace textmanip
                 chareveryxcharpanel.Show();
         }
         
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            {
+                if (radioButton2.Checked)
+                    hideAllPanels();
+                    replacepanel.Show();
+            }
+        }
+
         //
         //ADD EVERY X THING
         //
@@ -134,14 +129,6 @@ namespace textmanip
         //END ADD EVERY X THING
         //
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            {
-                if (radioButton2.Checked)
-                    hideAllPanels();
-                    removepanel.Show();
-            }
-        }
 
         //
         //REMOVE START
@@ -173,8 +160,32 @@ namespace textmanip
             }
 
         }
-        //
+
         //
         //END REMOVE
+        //
+
+        //
+        //REPLACE START
+        //
+
+        private void convBtn_Click(object sender, EventArgs e)
+        {
+            string initialText = input.Text; //initial text
+            string replaceThis = repInput.Text; //replace this
+            string replaceWith = replacerInput.Text; //with that
+
+
+            if (initialText.Length == 0)
+            {
+                //error
+                return;
+            }
+            else
+            {
+                convertedOut.Text = initialText.Replace(replaceThis, replaceWith);
+            }
+        }
+
     }
 }

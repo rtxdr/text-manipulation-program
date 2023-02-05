@@ -58,10 +58,21 @@
             this.outRP = new System.Windows.Forms.RichTextBox();
             this.inputRP = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.replacepanel = new System.Windows.Forms.Panel();
+            this.withL = new System.Windows.Forms.Label();
+            this.replacerInput = new System.Windows.Forms.TextBox();
+            this.repL = new System.Windows.Forms.Label();
+            this.repInput = new System.Windows.Forms.TextBox();
+            this.inputL = new System.Windows.Forms.Label();
+            this.convertedL = new System.Windows.Forms.Label();
+            this.convertedOut = new System.Windows.Forms.RichTextBox();
+            this.input = new System.Windows.Forms.TextBox();
+            this.convBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Bg)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.chareveryxcharpanel.SuspendLayout();
             this.removepanel.SuspendLayout();
+            this.replacepanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Close
@@ -102,10 +113,9 @@
             this.Title.ForeColor = System.Drawing.Color.Brown;
             this.Title.Location = new System.Drawing.Point(12, 9);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(167, 25);
+            this.Title.Size = new System.Drawing.Size(151, 23);
             this.Title.TabIndex = 2;
             this.Title.Text = "Text Manipulator";
-            this.Title.Click += new System.EventHandler(this.label1_Click);
             // 
             // Bg
             // 
@@ -249,7 +259,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label6.Location = new System.Drawing.Point(153, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.Size = new System.Drawing.Size(36, 12);
             this.label6.TabIndex = 10;
             this.label6.Text = "Insert :";
             // 
@@ -269,7 +279,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.Location = new System.Drawing.Point(12, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(63, 12);
             this.label5.TabIndex = 8;
             this.label5.Text = "Insert every :";
             // 
@@ -289,7 +299,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(12, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(33, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "Input :";
             // 
@@ -300,7 +310,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(12, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(54, 12);
             this.label4.TabIndex = 5;
             this.label4.Text = "Converted :";
             // 
@@ -365,7 +375,7 @@
             this.remlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.remlabel.Location = new System.Drawing.Point(12, 70);
             this.remlabel.Name = "remlabel";
-            this.remlabel.Size = new System.Drawing.Size(52, 13);
+            this.remlabel.Size = new System.Drawing.Size(46, 12);
             this.remlabel.TabIndex = 10;
             this.remlabel.Text = "Remove :";
             // 
@@ -385,7 +395,7 @@
             this.inplabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.inplabel.Location = new System.Drawing.Point(12, 32);
             this.inplabel.Name = "inplabel";
-            this.inplabel.Size = new System.Drawing.Size(37, 13);
+            this.inplabel.Size = new System.Drawing.Size(33, 12);
             this.inplabel.TabIndex = 6;
             this.inplabel.Text = "Input :";
             // 
@@ -396,7 +406,7 @@
             this.convlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.convlabel.Location = new System.Drawing.Point(12, 239);
             this.convlabel.Name = "convlabel";
-            this.convlabel.Size = new System.Drawing.Size(64, 13);
+            this.convlabel.Size = new System.Drawing.Size(54, 12);
             this.convlabel.TabIndex = 5;
             this.convlabel.Text = "Converted :";
             // 
@@ -429,14 +439,122 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // replacepanel
+            // 
+            this.replacepanel.Controls.Add(this.withL);
+            this.replacepanel.Controls.Add(this.replacerInput);
+            this.replacepanel.Controls.Add(this.repL);
+            this.replacepanel.Controls.Add(this.repInput);
+            this.replacepanel.Controls.Add(this.inputL);
+            this.replacepanel.Controls.Add(this.convertedL);
+            this.replacepanel.Controls.Add(this.convertedOut);
+            this.replacepanel.Controls.Add(this.input);
+            this.replacepanel.Controls.Add(this.convBtn);
+            this.replacepanel.Location = new System.Drawing.Point(236, 49);
+            this.replacepanel.Name = "replacepanel";
+            this.replacepanel.Size = new System.Drawing.Size(645, 422);
+            this.replacepanel.TabIndex = 12;
+            // 
+            // withL
+            // 
+            this.withL.AutoSize = true;
+            this.withL.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.withL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.withL.Location = new System.Drawing.Point(323, 70);
+            this.withL.Name = "withL";
+            this.withL.Size = new System.Drawing.Size(30, 12);
+            this.withL.TabIndex = 12;
+            this.withL.Text = "With :";
+            // 
+            // replacerInput
+            // 
+            this.replacerInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.replacerInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.replacerInput.Location = new System.Drawing.Point(325, 86);
+            this.replacerInput.Name = "replacerInput";
+            this.replacerInput.Size = new System.Drawing.Size(301, 13);
+            this.replacerInput.TabIndex = 11;
+            // 
+            // repL
+            // 
+            this.repL.AutoSize = true;
+            this.repL.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.repL.Location = new System.Drawing.Point(12, 70);
+            this.repL.Name = "repL";
+            this.repL.Size = new System.Drawing.Size(45, 12);
+            this.repL.TabIndex = 10;
+            this.repL.Text = "Replace :";
+            // 
+            // repInput
+            // 
+            this.repInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.repInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.repInput.Location = new System.Drawing.Point(15, 86);
+            this.repInput.Name = "repInput";
+            this.repInput.Size = new System.Drawing.Size(301, 13);
+            this.repInput.TabIndex = 9;
+            // 
+            // inputL
+            // 
+            this.inputL.AutoSize = true;
+            this.inputL.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.inputL.Location = new System.Drawing.Point(12, 32);
+            this.inputL.Name = "inputL";
+            this.inputL.Size = new System.Drawing.Size(33, 12);
+            this.inputL.TabIndex = 6;
+            this.inputL.Text = "Input :";
+            // 
+            // convertedL
+            // 
+            this.convertedL.AutoSize = true;
+            this.convertedL.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertedL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.convertedL.Location = new System.Drawing.Point(12, 239);
+            this.convertedL.Name = "convertedL";
+            this.convertedL.Size = new System.Drawing.Size(54, 12);
+            this.convertedL.TabIndex = 5;
+            this.convertedL.Text = "Converted :";
+            // 
+            // convertedOut
+            // 
+            this.convertedOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.convertedOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.convertedOut.Location = new System.Drawing.Point(15, 255);
+            this.convertedOut.Name = "convertedOut";
+            this.convertedOut.Size = new System.Drawing.Size(611, 96);
+            this.convertedOut.TabIndex = 2;
+            this.convertedOut.Text = "";
+            // 
+            // input
+            // 
+            this.input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.input.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.input.Location = new System.Drawing.Point(15, 48);
+            this.input.Name = "input";
+            this.input.Size = new System.Drawing.Size(611, 13);
+            this.input.TabIndex = 1;
+            // 
+            // convBtn
+            // 
+            this.convBtn.Location = new System.Drawing.Point(551, 374);
+            this.convBtn.Name = "convBtn";
+            this.convBtn.Size = new System.Drawing.Size(75, 23);
+            this.convBtn.TabIndex = 0;
+            this.convBtn.Text = "convert";
+            this.convBtn.UseVisualStyleBackColor = true;
+            this.convBtn.Click += new System.EventHandler(this.convBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(893, 483);
-            this.Controls.Add(this.removepanel);
             this.Controls.Add(this.chareveryxcharpanel);
+            this.Controls.Add(this.removepanel);
+            this.Controls.Add(this.replacepanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.Min);
@@ -446,7 +564,6 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Text manipulator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Bg)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -454,6 +571,8 @@
             this.chareveryxcharpanel.PerformLayout();
             this.removepanel.ResumeLayout(false);
             this.removepanel.PerformLayout();
+            this.replacepanel.ResumeLayout(false);
+            this.replacepanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,6 +609,16 @@
         private System.Windows.Forms.RichTextBox outRP;
         private System.Windows.Forms.TextBox inputRP;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel replacepanel;
+        private System.Windows.Forms.Label repL;
+        private System.Windows.Forms.TextBox repInput;
+        private System.Windows.Forms.Label inputL;
+        private System.Windows.Forms.Label convertedL;
+        private System.Windows.Forms.RichTextBox convertedOut;
+        private System.Windows.Forms.TextBox input;
+        private System.Windows.Forms.Button convBtn;
+        private System.Windows.Forms.Label withL;
+        private System.Windows.Forms.TextBox replacerInput;
     }
 }
 
